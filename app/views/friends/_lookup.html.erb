@@ -4,11 +4,10 @@
   <%= form_tag search_friends_path, remote: true, method: :get, id: 'friend-lookup-form' do %>
     <div class="form-group row no-padding text-center col-md-12">
       <div class="col-md-10">
-        <%= text_field_tag :search_param,
+        
+        <%= text_field_tag :search_param, ## here uses search in users_controller
         params[:search_param],
-        placeholder: 'First Name, Last Name or Email',
-        autofocus: true,
-        class: 'form-control search-box input-lg' %>
+        placeholder: 'First Name, Last Name or Email', autofocus: true, class: 'form-control search-box input-lg' %>
       </div>
       <div class="col-md-2">
         <%= button_tag(type: :submit, class: 'btn btn-lg btn-success') do %>

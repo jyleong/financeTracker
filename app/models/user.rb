@@ -38,6 +38,7 @@ class User < ActiveRecord::Base
   end
   
   def self.search(param)
+    # debugger
     return User.none if param.blank?
     
     param.strip!
