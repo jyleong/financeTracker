@@ -4,8 +4,8 @@ class User::RegistrationsController < Devise::RegistrationsController ## inherit
   protected
   ## need to configure for edit and sign up
   def configure_permitted_parameters
-    devise_paramater_sanitizer.for(:sign_up).push(:first_name, :last_name)
-    devise_paramater_sanitizer.for(:account_update).push(:first_name, :last_name)
+    devise_parameter_sanitizer.for(:sign_up).push(:first_name, :last_name)
+    devise_parameter_sanitizer.for(:account_update).push(:first_name, :last_name)
   end
   
 end
